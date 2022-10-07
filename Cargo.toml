@@ -1,0 +1,77 @@
+[package]
+name = "classic_computer_science_problems"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# Bit Fields
+# https://crates.io/crates/bitvec
+bitvec = "1.0.1"
+
+# Random number generators
+# https://crates.io/crates/rand
+rand = "0.8.5"
+
+# Memoization macro
+# https://crates.io/crates/memoize
+memoize = "0.3.1"
+
+# Various pathfinding algorithms, e.g., BFS, DFS, Djikstra, A-Star
+# https://crates.io/crates/pathfinding
+pathfinding = "3.0.14"
+
+# Graph data structure library.
+# https://crates.io/crates/petgraph
+petgraph = "0.6.2"
+
+# Parser combinators
+# https://crates.io/crates/nom
+nom = "7.1.1"
+
+
+[[bin]]
+name = "fib1"
+path = "book/chapter_01/fib1.rs"
+
+[[bin]]
+name = "fib2"
+path = "book/chapter_01/fib2.rs"
+
+[[bin]]
+name = "fib3"
+path = "book/chapter_01/fib3.rs"
+
+[[bin]]
+name = "fib4"
+path = "book/chapter_01/fib4.rs"
+
+[[bin]]
+name = "fib5"
+path = "book/chapter_01/fib5.rs"
+
+[[bin]]
+name = "fib6"
+path = "book/chapter_01/fib6.rs"
+
+[[bin]]
+name = "hanoi"
+path = "book/chapter_01/hanoi.rs"
+
+[[bin]]
+name = "calculate_pi"
+path = "book/chapter_01/calculate_pi.rs"
+
+[[bin]]
+name = "compressed_gene"
+path = "book/chapter_01/compressed_gene.rs"
+
+[[bin]]
+name = "unbreakable_encryption"
+path = "book/chapter_01/unbreakable_encryption.rs"
+
+[[bin]]
+name = "bit_vectors"
+path = "book/chapter_01/bit_vectors.rs"
