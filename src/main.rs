@@ -1,3 +1,5 @@
+use classic_computer_science_problems::*;
+
 fn main() {
-    println!("Hello, world!");
+    timed!(println!("Hello, world!"));
 }

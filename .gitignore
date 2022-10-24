@@ -1,1 +1,5 @@
+# Ignore Rust's build output
 /target
+
+# Ignore misc OS / filesystem files
+.DS_Store

@@ -1,5 +1,9 @@
+use std::f64::consts::PI;
+
+use classic_computer_science_problems::timed;
+
 /// # Calculate pi
-/// 
+///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter1/PiCalculator.java
 
 fn calculate_pi(num_terms: u64) -> f64 {
@@ -25,18 +29,24 @@ fn main() {
 
     println!("Numbers are ready! Time to bake some pi!");
 
-    let xs: Vec<f64> = powers_of_ten
-        .clone()
-        .map(|n| -> f64 { calculate_pi(n as u64) })
-        .collect();
+    timed!({
+        let xs: Vec<f64> = powers_of_ten
+            .clone()
+            .map(|n| -> f64 { calculate_pi(n as u64) })
+            .collect();
 
-    let result = xs
-        .iter()
-        .zip(powers_of_ten.clone().into_iter());
+        let result = xs.iter().zip(powers_of_ten.clone().into_iter());
 
-    for (x, y) in result {
-        println!("{:<10} iterations, result: {:>20}", y, x);
-    }
+        for (i, (x, y)) in result.enumerate() {
+            println!(
+                "{:<10} iterations, result: {:>20.2$}, difference: {3:>20.2$}%",
+                y,
+                x,
+                i + 1,
+                x / PI
+            );
+        }
+    });
 
     println!("Your pi is ready! 😋");
 }

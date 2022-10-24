@@ -1,10 +1,9 @@
 /// # "Unbreakable" Encryption
-/// 
+///
 /// This implementation leans into `std::iter` to avoid the `new byte[]` allocations and for-loops in the Java implementation.
-/// 
+///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter1/UnbreakableEncryption.java
-/// 
-
+///
 use rand::prelude::*;
 
 struct KeyPair {
@@ -54,7 +53,7 @@ impl KeyPair {
 }
 
 fn main() {
-    let kp = KeyPair::encrypt("My super secret password abc890xyz123");
+    let kp = KeyPair::encrypt("My super secret password abc890xyz123 🔐");
 
     if let Ok(decrypted) = kp.decrypt() {
         println!("Decrypted: `{}`", decrypted);

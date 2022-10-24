@@ -1,7 +1,12 @@
 [package]
 name = "classic_computer_science_problems"
+description = "Classic Computer Science Problems in Rust"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/willowell/classic_computer_science_problems_in_rust"
+# See `src/main.rs` for this program entrypoint.
+default-run = "classic_computer_science_problems"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -11,13 +16,30 @@ edition = "2021"
 # https://crates.io/crates/bitvec
 bitvec = "1.0.1"
 
-# Random number generators
-# https://crates.io/crates/rand
-rand = "0.8.5"
+# Pretty console output!
+# https://crates.io/crates/console
+console = "0.15.2"
+
+# Swiss army knife of iterator tools, not unlike Python's `itertools` module
+# https://crates.io/crates/itertools
+itertools = "0.10.5"
 
 # Memoization macro
 # https://crates.io/crates/memoize
 memoize = "0.3.1"
+
+# Parser combinators
+# https://crates.io/crates/nom
+nom = "7.1.1"
+
+# Float newtype that excludes NaN, allowing for implementations of `Eq` and `Ord`.
+#
+# This is especially important for the A* implementation in Chapter 2. `std::collections::HashMap`
+# requires that the value be totally ordered (PartialEq + Eq + PartialOrd + Ord), but `f32` and `f64`
+# cannot fulfill this as-is because `NaN != NaN`, which breaks `Eq` and `Ord`.
+#
+# https://crates.io/crates/ordered-float
+ordered-float = "3.3.0"
 
 # Various pathfinding algorithms, e.g., BFS, DFS, Djikstra, A-Star
 # https://crates.io/crates/pathfinding
@@ -27,10 +49,11 @@ pathfinding = "3.0.14"
 # https://crates.io/crates/petgraph
 petgraph = "0.6.2"
 
-# Parser combinators
-# https://crates.io/crates/nom
-nom = "7.1.1"
+# Random number generators
+# https://crates.io/crates/rand
+rand = "0.8.5"
 
+# Chapter 1 Examples
 
 [[bin]]
 name = "fib1"
@@ -75,3 +98,49 @@ path = "book/chapter_01/unbreakable_encryption.rs"
 [[bin]]
 name = "bit_vectors"
 path = "book/chapter_01/bit_vectors.rs"
+
+# Chapter 1 Exercises
+
+[[bin]]
+name = "hanoi_k_towers"
+path = "book/chapter_01/exercises/hanoi_k_towers.rs"
+
+[[bin]]
+name = "image_otp"
+path = "book/chapter_01/exercises/image_otp.rs"
+
+# Chapter 2 Examples
+
+[[bin]]
+name = "dna_search"
+path = "book/chapter_02/dna_search.rs"
+
+[[bin]]
+name = "generic_search"
+path = "book/chapter_02/generic_search.rs"
+
+[[bin]]
+name = "maze"
+path = "book/chapter_02/maze.rs"
+
+[[bin]]
+name = "maze2"
+path = "book/chapter_02/maze2.rs"
+
+[[bin]]
+name = "mc"
+path = "book/chapter_02/missionaries_and_cannibals.rs"
+
+# Chapter 2 Exercises
+
+[[bin]]
+name = "linear_binary_search_performance"
+path = "book/chapter_02/exercises/linear_binary_search_performance.rs"
+
+[[bin]]
+name = "maze_search_states"
+path = "book/chapter_02/exercises/maze_search_states.rs"
+
+[[bin]]
+name = "more_mc"
+path = "book/chapter_02/exercises/more_missionaries_and_cannibals.rs"

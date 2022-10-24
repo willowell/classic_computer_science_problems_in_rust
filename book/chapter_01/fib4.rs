@@ -1,10 +1,12 @@
 /// # Iterative fibonacci
+///
 /// This fibonacci program uses an iterative approach rather than recursion.
-/// 
+///
+///
+///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter1/Fib4.java
-/// 
-
-use std::time::Instant;
+///
+use classic_computer_science_problems::timed;
 
 fn fib(x: u64) -> u64 {
     let mut last = 0;
@@ -24,17 +26,13 @@ fn fib(x: u64) -> u64 {
 }
 
 fn main() {
-    let start = Instant::now();
+    timed!({
+        let xs: Vec<u64> = (1..=40).map(|x| fib(x)).collect();
 
-    let xs: Vec<u64> = (1..=40)
-        .map(|x| fib(x))
-        .collect();
+        println!("Results of fib, using match:");
 
-    println!("Results of fib, using match:");
-
-    for (i, x) in xs.into_iter().enumerate() {
-        println!("fib({}): {}", i + 1, x);
-    }
-
-    println!("Took {} ms.", start.elapsed().as_millis());
+        for (i, x) in xs.into_iter().enumerate() {
+            println!("fib({}): {}", i + 1, x);
+        }
+    });
 }
