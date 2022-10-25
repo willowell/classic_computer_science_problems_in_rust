@@ -1,5 +1,5 @@
-pub mod generic_search;
 pub mod gene;
+pub mod generic_search;
 pub mod maze;
 
 /// # Timed

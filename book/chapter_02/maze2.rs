@@ -2,7 +2,6 @@
 ///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter2/Maze.java
 ///
-
 use classic_computer_science_problems::maze::{Maze, MazeLocation};
 
 use pathfinding::prelude::*;

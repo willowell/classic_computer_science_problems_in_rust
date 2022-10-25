@@ -18,14 +18,11 @@
 ///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter2/Maze.java
 ///
-
 use classic_computer_science_problems::{
     generic_search::{astar, bfs, dfs},
     maze::{Maze, MazeLocation},
 };
 use ordered_float::OrderedFloat;
-
-
 
 fn main() {
     let rows = 16;

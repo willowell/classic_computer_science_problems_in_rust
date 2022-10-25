@@ -7,7 +7,6 @@ use std::{
 
 use ordered_float::OrderedFloat;
 
-
 pub fn linear_contains<T>(xs: &[T], key: T) -> bool
 where
     T: Ord,
@@ -135,7 +134,10 @@ where
     }
 }
 
-impl<T> Iterator for Node<T> where T: Clone + fmt::Debug + Default + PartialEq {
+impl<T> Iterator for Node<T>
+where
+    T: Clone + fmt::Debug + Default + PartialEq,
+{
     type Item = Box<Node<T>>;
 
     fn next(&mut self) -> Option<Self::Item> {
@@ -196,7 +198,9 @@ where
     pub fn get_total_cost_of_path(&self) -> OrderedFloat<f64> {
         let node_path = self.to_node_path();
 
-        node_path.iter().fold(OrderedFloat(0.0), |acc, node| acc + node.cost)
+        node_path
+            .iter()
+            .fold(OrderedFloat(0.0), |acc, node| acc + node.cost)
     }
 }
 

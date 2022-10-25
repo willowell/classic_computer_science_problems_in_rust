@@ -1,4 +1,3 @@
-
 use bitvec::prelude::*;
 use nom::{character::complete::one_of, combinator::*, error::context, multi::*, IResult};
 
@@ -22,7 +21,7 @@ impl Nucleotide {
             Nucleotide::Thymine => bitvec![1, 1],
         }
     }
-    
+
     /// Convert a nucleotide to a character.
     pub fn to_letter(&self) -> char {
         match &self {

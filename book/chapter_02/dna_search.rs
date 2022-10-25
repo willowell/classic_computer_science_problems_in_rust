@@ -1,7 +1,6 @@
 /// # DNA Search
 ///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter2/Gene.java
-
 use classic_computer_science_problems::gene::*;
 
 fn main() {

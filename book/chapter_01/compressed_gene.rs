@@ -38,18 +38,17 @@ fn main() {
             );
             println!("Result: `{:?}`", gene.codons);
 
-            let original_gene_as_nucleotide_vec: Vec<Nucleotide> =
-                gene.codons
-                    .clone()
-                    .iter()
-                    .flat_map(Codon::to_nucleotide_vec)
-                    .collect();
+            let original_gene_as_nucleotide_vec: Vec<Nucleotide> = gene
+                .codons
+                .clone()
+                .iter()
+                .flat_map(Codon::to_nucleotide_vec)
+                .collect();
 
-            let compressed_gene: Vec<BitVec> =
-                original_gene_as_nucleotide_vec
-                    .iter()
-                    .map(Nucleotide::to_bits)
-                    .collect();
+            let compressed_gene: Vec<BitVec> = original_gene_as_nucleotide_vec
+                .iter()
+                .map(Nucleotide::to_bits)
+                .collect();
 
             let decompressed_gene: Vec<Nucleotide> = compressed_gene
                 .clone()
@@ -58,11 +57,10 @@ fn main() {
                 .filter_map(identity)
                 .collect();
 
-            let short_gene: String =
-                original_gene_as_nucleotide_vec
-                    .iter()
-                    .map(Nucleotide::to_letter)
-                    .collect();
+            let short_gene: String = original_gene_as_nucleotide_vec
+                .iter()
+                .map(Nucleotide::to_letter)
+                .collect();
 
             let short_decompressed_gene: String = decompressed_gene
                 .clone()
