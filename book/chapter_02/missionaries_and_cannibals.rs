@@ -1,7 +1,7 @@
 /// # Missionaries and Cannibals
-/// 
+///
 /// Nothing really special going on with this implementation compared to the Java one.
-/// 
+///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter2/MCState.java
 use std::fmt;
 
