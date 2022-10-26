@@ -150,3 +150,15 @@ path = "book/chapter_02/exercises/more_missionaries_and_cannibals.rs"
 [[bin]]
 name = "au_map"
 path = "book/chapter_03/australian_map_colouring.rs"
+
+[[bin]]
+name = "eight_queens"
+path = "book/chapter_03/eight_queens.rs"
+
+[[bin]]
+name = "word_search"
+path = "book/chapter_03/word_search.rs"
+
+[[bin]]
+name = "send_more_money"
+path = "book/chapter_03/send_more_money.rs"
