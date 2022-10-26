@@ -1,3 +1,4 @@
+pub mod csp;
 pub mod gene;
 pub mod generic_search;
 pub mod maze;

@@ -144,3 +144,9 @@ path = "book/chapter_02/exercises/maze_search_states.rs"
 [[bin]]
 name = "more_mc"
 path = "book/chapter_02/exercises/more_missionaries_and_cannibals.rs"
+
+# Chapter 3 Examples
+
+[[bin]]
+name = "au_map"
+path = "book/chapter_03/australian_map_colouring.rs"

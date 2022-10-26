@@ -58,6 +58,12 @@ Furthermore, there are some excellent crates like the `nom` parser combinator cr
 
 *However*, this implementation does *not* use unstable / nightly Rust. All you need is a stable Rust toolchain for this implementation.
 
+## How this Repository is Organized
+
+This repository consists of a `/src` directory that holds shared code and a `/book` directory that consists of binary entrypoints which may or may not use code from the `/src` directory.
+
+This implementation sits somewhere between the Swift and Java implementations - the shared `/src` directory is not unlike the shared `Sources` in the Swift Playground implementation, but this implementation uses ostensibly standalone entrypoints
+
 ## License
 
 In keeping with Rust ecosystem conventions, this repository is dual-licensed under the Apache-2.0 license and the MIT license.
