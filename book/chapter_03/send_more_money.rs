@@ -1,7 +1,5 @@
 /// # SEND+MORE=MONEY
-/// 
+///
 /// Java implementation:
 
-fn main() {
-
-}
+fn main() {}

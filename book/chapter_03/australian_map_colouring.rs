@@ -1,13 +1,13 @@
 /// # The Australian Map Colouring Constraint Problem
-/// 
+///
 /// This example is a bit rough around the edges...
 /// Since the Java implementation makes use of generic abstract classes and type elision, we have to address both of these
 /// issues along the way. Rather than replace the stateful generic abstract class with a struct and trait combo, I have opted to
 /// instead go with just a trait, whose `variables()` function mimics the `variables` property on the corresponding Java
 /// abstract class.
-/// 
+///
 /// Methods in the Java implementation that throw exceptions return `Result`s in this implementation.
-/// 
+///
 /// Aside from this type tetris, this example is not terribly complicated.
 ///
 /// Java implementation: https://github.com/davecom/ClassicComputerScienceProblemsInJava/blob/master/CCSPiJ/src/chapter3/MapColoringConstraint.java
@@ -75,7 +75,7 @@ fn main() {
         // ACT is inside NSW, so any other colour will do.
         // Likewise, JBT is on the coastline surrounded by NSW, so any other colour will do.
         "Australian Capital Territory", // enclave inside New South Wales
-        "Jervis Bay Territory" // territory on the coast of New South Wales
+        "Jervis Bay Territory",         // territory on the coast of New South Wales
     ];
 
     let mut domains = HashMap::new();

@@ -71,7 +71,6 @@ where
         &self,
         assignment: HashMap<V, D>,
     ) -> Option<HashMap<V, D>> {
-
         // Assignment is complete if every variable is assigned (base case)
         if assignment.len() == self.variables.len() {
             return Some(assignment);
@@ -91,8 +90,8 @@ where
                         // Returning `result` itself is completely valid per the types,
                         // but this can cause invalid states to be returned as well.
                         if let Some(result) =
-                            self.backtracking_search_with_assignment(local_assignment.clone()) {
-
+                            self.backtracking_search_with_assignment(local_assignment.clone())
+                        {
                             return Some(result);
                         }
                     }
