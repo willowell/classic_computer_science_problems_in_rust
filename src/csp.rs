@@ -7,6 +7,7 @@ pub trait Constraint<V, D> {
     fn is_satisfied(&self, assignment: &HashMap<V, D>) -> bool;
 }
 
+#[derive(Debug)]
 pub struct CSP<V, D, C>
 where
     C: Constraint<V, D>,
@@ -70,7 +71,6 @@ where
         &self,
         assignment: HashMap<V, D>,
     ) -> Option<HashMap<V, D>> {
-        //println!("{:?}", assignment);
 
         // Assignment is complete if every variable is assigned (base case)
         if assignment.len() == self.variables.len() {
@@ -78,8 +78,6 @@ where
         }
 
         let unassigned = self.variables.iter().find(|v| !assignment.contains_key(v));
-
-        //println!("Unassigned: {:?}", unassigned);
 
         if let Some(unassigned) = unassigned {
             for domains in self.domains.get(unassigned) {
@@ -89,10 +87,14 @@ where
                     local_assignment.insert(unassigned.clone(), value.clone());
 
                     if self.is_consistent(unassigned.clone(), &local_assignment) {
-                        let result =
-                            self.backtracking_search_with_assignment(local_assignment.clone());
+                        // Return a search result ONLY on `Some`.
+                        // Returning `result` itself is completely valid per the types,
+                        // but this can cause invalid states to be returned as well.
+                        if let Some(result) =
+                            self.backtracking_search_with_assignment(local_assignment.clone()) {
 
-                        return result;
+                            return Some(result);
+                        }
                     }
                 }
             }
