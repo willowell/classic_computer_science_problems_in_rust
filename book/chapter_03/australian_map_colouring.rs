@@ -84,7 +84,7 @@ fn main() {
         domains.insert(variable, vec!["red", "green", "blue"]);
     }
 
-    let mut csp: CSP<&str, &str, MapColouringConstraint> = CSP::new(variables, domains).unwrap();
+    let mut csp: CSP<_, _, MapColouringConstraint> = CSP::new(variables, domains).unwrap();
 
     let constraints = vec![
         MapColouringConstraint::new("Western Australia", "Northern Territory"),
