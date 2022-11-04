@@ -20,9 +20,21 @@ bitvec = "1.0.1"
 # https://crates.io/crates/console
 console = "0.15.2"
 
+# Generic traits over Rust collections.
+# https://crates.io/crates/gcollections
+gcollections = "1.5.0"
+
 # Swiss army knife of iterator tools, not unlike Python's `itertools` module
 # https://crates.io/crates/itertools
 itertools = "0.10.5"
+
+# Generic intervals.
+# https://crates.io/crates/intervallum
+intervallum = "1.4.0"
+
+# Constraint programming library
+# https://crates.io/crates/libpcp
+libpcp = "0.6.4"
 
 # Memoization macro
 # https://crates.io/crates/memoize
@@ -156,9 +168,19 @@ name = "eight_queens"
 path = "book/chapter_03/eight_queens.rs"
 
 [[bin]]
+name = "eight_queens2"
+path = "book/chapter_03/eight_queens2.rs"
+
+[[bin]]
 name = "word_search"
 path = "book/chapter_03/word_search.rs"
 
 [[bin]]
 name = "send_more_money"
 path = "book/chapter_03/send_more_money.rs"
+
+# Chapter 4 Examples
+
+[[bin]]
+name = "byog"
+path = "book/chapter_04/build_your_own_graph.rs"
